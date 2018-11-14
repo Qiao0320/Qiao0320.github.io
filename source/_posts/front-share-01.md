@@ -48,8 +48,9 @@ tags:
   changeColor();
   ```
   执行过程：
-  {% asset_img process.png 过程 %}
-  ![过程](./front-share-01/process.png)
+  {% asset_img execution-context.png 过程 %}
+  ![过程](./front-share-01/execution-context.png)
+  
   > 注意：函数中，遇到return能直接终止可执行代码的执行，因此会直接将当前上下文弹出栈。
 
 总结： 
@@ -158,6 +159,9 @@ windowEC = {
 - JavaScript中只有全局作用域与函数作用域(因为eval我们平时开发中几乎不会用到它，这里不讨论)。
 
 - 作用域与执行上下文：JavaScript代码的整个执行过程，分为两个阶段，代码编译阶段与代码执行阶段。编译阶段由编译器完成，将代码翻译成可执行代码，这个阶段作用域规则会确定。执行阶段由引擎完成，主要任务是执行可执行代码，执行上下文在这个阶段创建。
+
+{% asset_img process.png 过程 %}
+  ![过程](./front-share-01/process.png)
 
 **作用域链，是由当前环境与上层环境的一系列变量对象组成，它保证了当前执行环境对符合访问权限的变量和函数的有序访问。**
 
