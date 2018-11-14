@@ -81,21 +81,21 @@
 
 <meta name="description" content="前端基础知识点[TOC] 一、内存空间 数据类型 基本类型(栈 stack) : Number、String 、Boolean、Null 和 Undefined , Symbol(es6 新增)基本数据类型是按值访问,栈内存最大是8MB（超出报栈溢出）  引用类型(堆 heap) :Object 、Array 、Function 、Data引用类型数据在栈内存中保存的实际上是对象在堆内存中的引用地">
 <meta property="og:type" content="article">
-<meta property="og:title" content="front-share-01">
-<meta property="og:url" content="http://yoursite.com/2018/11/13/front-share-01/index.html">
+<meta property="og:title" content="front-note-01">
+<meta property="og:url" content="http://yoursite.com/2018/11/14/front-note-01/index.html">
 <meta property="og:site_name" content="Qiao&#39;s Blog">
 <meta property="og:description" content="前端基础知识点[TOC] 一、内存空间 数据类型 基本类型(栈 stack) : Number、String 、Boolean、Null 和 Undefined , Symbol(es6 新增)基本数据类型是按值访问,栈内存最大是8MB（超出报栈溢出）  引用类型(堆 heap) :Object 、Array 、Function 、Data引用类型数据在栈内存中保存的实际上是对象在堆内存中的引用地">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2018/11/13/front-share-01/front-share-01/execution-context.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/13/front-share-01/front-share-01/execution-context-cycle.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/13/front-share-01/front-share-01/scope-chain.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/14/front-note-01/front-share-01/execution-context.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/599584-391af3aad043c028.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/599584-c850e91b12e88831.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/599584-b5e7e00de7c9213a.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/13/front-share-01/front-share-01/fn-scope-chain.png">
-<meta property="og:updated_time" content="2018-11-14T07:08:18.386Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/599584-aacdb7b7ba2468da.png">
+<meta property="og:updated_time" content="2018-11-14T06:08:28.491Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="front-share-01">
+<meta name="twitter:title" content="front-note-01">
 <meta name="twitter:description" content="前端基础知识点[TOC] 一、内存空间 数据类型 基本类型(栈 stack) : Number、String 、Boolean、Null 和 Undefined , Symbol(es6 新增)基本数据类型是按值访问,栈内存最大是8MB（超出报栈溢出）  引用类型(堆 heap) :Object 、Array 、Function 、Data引用类型数据在栈内存中保存的实际上是对象在堆内存中的引用地">
-<meta name="twitter:image" content="http://yoursite.com/2018/11/13/front-share-01/front-share-01/execution-context.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/14/front-note-01/front-share-01/execution-context.png">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/13/front-share-01/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/14/front-note-01/">
 
 
 
 
 
-  <title>front-share-01 | Qiao's Blog</title>
+  <title>front-note-01 | Qiao's Blog</title>
   
 
 
@@ -272,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/13/front-share-01/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/14/front-note-01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Qiao">
@@ -289,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">front-share-01</h1>
+          <h1 class="post-title" itemprop="name headline">front-note-01</h1>
         
 
         <div class="post-meta">
@@ -301,8 +301,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-13T09:54:03+08:00">
-                2018-11-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-14T14:02:30+08:00">
+                2018-11-14
               </time>
             
 
@@ -311,28 +311,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/front-end/" itemprop="url" rel="index">
-                    <span itemprop="name">front-end</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -398,37 +376,35 @@
 <li>函数的执行上下文的个数没有限制</li>
 <li>每次某个函数被调用，就会有个新的执行上下文为其创建，即使是调用的自身函数，也是如此。</li>
 </ul>
-<h4 id="三、变量对象-Variable-Object"><a href="#三、变量对象-Variable-Object" class="headerlink" title="三、变量对象(Variable Object)"></a>三、变量对象(Variable Object)</h4><p>一个执行上下文的生命周期可以分为两个阶段:</p>
+<h4 id="三、变量对象-Variable-Objext"><a href="#三、变量对象-Variable-Objext" class="headerlink" title="三、变量对象(Variable Objext)"></a>三、变量对象(Variable Objext)</h4><blockquote>
+<p>一个执行上下文的生命周期可以分为两个阶段。</p>
+</blockquote>
 <ul>
 <li><p>创建阶段<br>在这个阶段中，执行上下文会分别<strong>创建变量对象</strong>，<strong>建立作用域链</strong>，以及<strong>确定this的指向</strong>。</p>
 </li>
-<li><p>代码执行阶段<br>创建完成之后，就会开始执行代码，这个时候，会完成<strong>变量赋值</strong>，<strong>函数引用</strong>，以及<strong>执行其他代码</strong>。<br><img src="./front-share-01/execution-context-cycle.png" alt="执行上下文生命周期"></p>
+<li><p>代码执行阶段<br>创建完成之后，就会开始执行代码，这个时候，会完成<strong>变量赋值</strong>，<strong>函数引用</strong>，以及<strong>执行其他代码</strong>。<br><img src="https://upload-images.jianshu.io/upload_images/599584-391af3aad043c028.png" alt="执行上下文生命周期"></p>
 </li>
 </ul>
-<h5 id="创建变量对象"><a href="#创建变量对象" class="headerlink" title="创建变量对象"></a>创建变量对象</h5><p>变量对象的创建，依次经历了以下几个过程。</p>
+<h5 id="创建变量对象"><a href="#创建变量对象" class="headerlink" title="创建变量对象"></a><span id="jump">创建变量对象</span></h5><p>变量对象的创建，依次经历了以下几个过程。</p>
 <ol>
 <li><p>建立arguments对象。<br>检查当前上下文中的参数，建立该对象下的属性与属性值。</p>
 </li>
 <li><p>检查当前上下文的函数声明，也就是使用function关键字声明的函数。<br>在变量对象中以函数名建立一个属性，属性值为指向该函数所在内存地址的引用。如果函数名的属性已经存在，那么该属性将会被新的引用所覆盖。</p>
 </li>
 <li><p>检查当前上下文中的变量声明，每找到一个变量声明，就在变量对象中以变量名建立一个属性，属性值为undefined。<br>如果该变量名的属性已经存在，为了防止同名的函数被修改为undefined，则会直接跳过，原属性值不会被修改。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a);</span><br><span class="line">  <span class="built_in">console</span>.log(foo());</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建过程</span></span><br><span class="line">testEC = &#123;</span><br><span class="line">  <span class="comment">// 变量对象</span></span><br><span class="line">  VO: &#123;&#125;,</span><br><span class="line">  scopeChain: &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">VO = &#123;</span><br><span class="line">  <span class="built_in">arguments</span>: &#123;...&#125;,  <span class="comment">//注：在浏览器的展示中，函数的参数可能并不是放在arguments对象中，这里为了方便理解，做了这样的处理</span></span><br><span class="line">  foo: &lt;foo reference&gt;  // 表示foo的地址引用</span><br><span class="line">  a: undefined</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// demo01</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a);</span><br><span class="line">  <span class="built_in">console</span>.log(foo());</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建过程</span></span><br><span class="line">testEC = &#123;</span><br><span class="line">  <span class="comment">// 变量对象</span></span><br><span class="line">  VO: &#123;&#125;,</span><br><span class="line">  scopeChain: &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 因为本文暂时不详细解释作用域链，所以把变量对象专门提出来说明</span></span><br><span class="line"><span class="comment">// VO 为 Variable Object的缩写，即变量对象</span></span><br><span class="line">VO = &#123;</span><br><span class="line">  <span class="built_in">arguments</span>: &#123;...&#125;,  <span class="comment">//注：在浏览器的展示中，函数的参数可能并不是放在arguments对象中，这里为了方便理解，我做了这样的处理</span></span><br><span class="line">  foo: &lt;foo reference&gt;  // 表示foo的地址引用</span><br><span class="line">  a: undefined</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>未进入执行阶段之前，变量对象中的属性都不能访问。但是进入执行阶段之后，变量对象转变为了活动对象，里面的属性都能被访问了，然后开始进行执行阶段的操作。</p>
 <blockquote>
-<p>变量对象和活动对象的区别：</p>
-<p>他们其实都是同一个对象，只是处于执行上下文的不同生命周期。不过只有处于函数调用栈栈顶的执行上下文中的变量对象，才会变成活动对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 执行阶段</span></span><br><span class="line">VO -&gt;  AO   <span class="comment">// Active Object</span></span><br><span class="line">AO = &#123;</span><br><span class="line">  <span class="built_in">arguments</span>: &#123;...&#125;,</span><br><span class="line">  foo: &lt;foo reference&gt;,</span><br><span class="line">  a: 1,</span><br><span class="line">  this: Window</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>变量对象和活动对象的区别：他们其实都是同一个对象，只是处于执行上下文的不同生命周期。不过只有处于函数调用栈栈顶的执行上下文中的变量对象，才会变成活动对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 执行阶段</span></span><br><span class="line">VO -&gt;  AO   <span class="comment">// Active Object</span></span><br><span class="line">AO = &#123;</span><br><span class="line">  <span class="built_in">arguments</span>: &#123;...&#125;,</span><br><span class="line">  foo: &lt;foo reference&gt;,</span><br><span class="line">  a: 1,</span><br><span class="line">  this: Window</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <p>执行顺序：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> a;</span><br><span class="line">  <span class="built_in">console</span>.log(a);</span><br><span class="line">  <span class="built_in">console</span>.log(foo());</span><br><span class="line">  a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure></p>
-<h5 id="全局上下文的变量对象"><a href="#全局上下文的变量对象" class="headerlink" title="全局上下文的变量对象"></a>全局上下文的变量对象</h5><p>全局上下文的变量对象，就是window对象，this也是指向window。</p>
-<p>全局上下文的生命周期，与程序的生命周期一致，只要程序运行不结束，比如关掉浏览器窗口，全局上下文就会一直存在。</p>
-<p>其他所有的上下文环境，都能直接访问全局上下文的属性。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 以浏览器中为例，全局对象为window</span></span><br><span class="line"><span class="comment">// 全局上下文</span></span><br><span class="line">windowEC = &#123;</span><br><span class="line">  VO: Window,</span><br><span class="line">  scopeChain: &#123;&#125;,</span><br><span class="line">  <span class="keyword">this</span>: Window</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="全局上下文的变量对象"><a href="#全局上下文的变量对象" class="headerlink" title="全局上下文的变量对象"></a>全局上下文的变量对象</h5><p>全局上下文的变量对象，就是window对象，this也是指向window。<br>全局上下文的生命周期，与程序的生命周期一致，只要程序运行不结束，比如关掉浏览器窗口，全局上下文就会一直存在。<br>其他所有的上下文环境，都能直接访问全局上下文的属性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 以浏览器中为例，全局对象为window</span></span><br><span class="line"><span class="comment">// 全局上下文</span></span><br><span class="line">windowEC = &#123;</span><br><span class="line">  VO: Window,</span><br><span class="line">  scopeChain: &#123;&#125;,</span><br><span class="line">  <span class="keyword">this</span>: Window</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h4 id="四、作用域链与闭包"><a href="#四、作用域链与闭包" class="headerlink" title="四、作用域链与闭包"></a>四、作用域链与闭包</h4><h5 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h5><ul>
 <li><p>JavaScript中只有全局作用域与函数作用域(因为eval我们平时开发中几乎不会用到它，这里不讨论)。</p>
 </li>
-<li><p>作用域与执行上下文：JavaScript代码的整个执行过程，分为两个阶段，代码编译阶段与代码执行阶段。编译阶段由编译器完成，将代码翻译成可执行代码，这个阶段作用域规则会确定。执行阶段由引擎完成，主要任务是执行可执行代码，执行上下文在这个阶段创建。<br><img src="./front-share-01/scope-chain.png" alt="作用域链"></p>
+<li><p>作用域与执行上下文：JavaScript代码的整个执行过程，分为两个阶段，代码编译阶段与代码执行阶段。编译阶段由编译器完成，将代码翻译成可执行代码，这个阶段作用域规则会确定。执行阶段由引擎完成，主要任务是执行可执行代码，执行上下文在这个阶段创建。<br><img src="https://upload-images.jianshu.io/upload_images/599584-c850e91b12e88831.png" alt="代码编译与执行"></p>
 </li>
 </ul>
 <p><strong>作用域链，是由当前环境与上层环境的一系列变量对象组成，它保证了当前执行环境对符合访问权限的变量和函数的有序访问。</strong></p>
@@ -442,49 +418,41 @@
 <p>在大多数理解中，包括许多著名的书籍，文章里都以函数B的名字代指这里生成的闭包。而在chrome中，则以执行上下文A的函数名代指闭包。</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> bar;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> bar = foo();</span><br><span class="line">bar();</span><br></pre></td></tr></table></figure>
-<p>上面的例子，首先有执行上下文foo，在foo中定义了函数bar，而通过对外返回bar的方式让bar得以执行。当bar执行时，访问了foo内部的变量a，b，闭包产生。</p>
-<p>JavaScript拥有自动的垃圾回收机制，当一个值在内存中失去引用时，垃圾回收机制会将其回收，释放内存。函数的执行上下文在执行完毕之后，执行上下文失去引用，那么该函数的生命周期就会结束，其占用的内存空间很快就会被垃圾回收器释放。可是闭包的存在，会阻止这一过程。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fn = <span class="literal">null</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">innnerFoo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">  &#125;</span><br><span class="line">  fn = innnerFoo; <span class="comment">// 将 innnerFoo的引用，赋值给全局变量中的fn</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  fn(); <span class="comment">// 此处的保留的innerFoo的引用</span></span><br><span class="line">&#125;</span><br><span class="line">foo();</span><br><span class="line">bar(); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p>上面的例子，首先有执行上下文foo，在foo中定义了函数bar，而通过对外返回bar的方式让bar得以执行。当bar执行时，访问了foo内部的变量a，b。因此这个时候闭包产生。<br>JavaScript拥有自动的垃圾回收机制，当一个值在内存中失去引用时，垃圾回收机制会将其回收，释放内存。函数的执行上下文在执行完毕之后，生命周期结束，那么该函数的执行上下文就会失去引用。其占用的内存空间很快就会被垃圾回收器释放。可是闭包的存在，会阻止这一过程。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//demo1</span></span><br><span class="line"><span class="keyword">var</span> fn = <span class="literal">null</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">innnerFoo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">  &#125;</span><br><span class="line">  fn = innnerFoo; <span class="comment">// 将 innnerFoo的引用，赋值给全局变量中的fn</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  fn(); <span class="comment">// 此处的保留的innerFoo的引用</span></span><br><span class="line">&#125;</span><br><span class="line">foo();</span><br><span class="line">bar(); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
 <p>在上面的例子中，foo执行完毕之后，生命周期结束，按照垃圾回收机制会被回收。但是通过<code>fn = innnerFoo;</code>函数innnerFoo的引用被保存了下来，赋值给了全局变量fn。这个行为导致了foo的变量对象也被保留了下来。于是，函数fn在函数bar内部执行时，依然可以访问这个被保留下来的变量对象。所以此刻仍然能够访问到变量a的值。</p>
 <p>这样，我们就可以称foo为闭包。</p>
-<p><img src="./front-share-01/fn-scope-chain.png" alt="闭包foo的作用域链"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/599584-aacdb7b7ba2468da.png" alt="闭包foo的作用域链"></p>
 <p>所以，通过闭包，我们可以在<strong>其他的执行上下文中，访问到函数的内部变量</strong>。比如在上面的例子中，我们在函数bar的执行环境中访问到了函数foo的a变量。</p>
 <h4 id="五、this"><a href="#五、this" class="headerlink" title="五、this"></a>五、this</h4><p>this的指向，是在函数被调用的时候确定的，也就是执行上下文被创建的时候确定的。<strong>在函数执行过程中，this一旦确定就不可更改。</strong></p>
 <h5 id="函数中的this"><a href="#函数中的this" class="headerlink" title="函数中的this"></a>函数中的this</h5><p>几个例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">20</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">20</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</span><br><span class="line">  &#125;</span><br><span class="line">  foo();</span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  a: <span class="number">10</span>,</span><br><span class="line">  c: <span class="keyword">this</span>.a + <span class="number">20</span>,</span><br><span class="line">  fn: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.a;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(obj.c);</span><br><span class="line"><span class="built_in">console</span>.log(obj.fn());</span><br></pre></td></tr></table></figure>
-<p>函数被单独调用时，this指向undefined。非严格模式下，当this指向undefined时，会自动指向全局对象。</p>
+<p>函数调用时，this指向undefined。非严格模式下，当this指向undefined时，会自动指向全局对象。</p>
 <blockquote>
 <p><strong>注意</strong>：setTimeout 中的回调函数在严格模式下也指向 window 而不是 undefined。</p>
 </blockquote>
-<p>方法调用：方法调用表现为对象属性访问的形式。</p>
-<p>区分：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'Hello'</span>, <span class="string">'World'</span>].join(<span class="string">', '</span>); <span class="comment">// 方法调用</span></span><br><span class="line">(&#123; <span class="attr">ten</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="number">10</span>; &#125; &#125;).ten(); <span class="comment">// 方法调用</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;  </span><br><span class="line">obj.myFunction = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>().toString();</span><br><span class="line">&#125;;</span><br><span class="line">obj.myFunction(); <span class="comment">// 方法调用</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> otherFunction = obj.myFunction;  </span><br><span class="line">otherFunction();     <span class="comment">// 函数调用  </span></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">'16.60'</span>); <span class="comment">// 函数调用  </span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="number">0</span>);            <span class="comment">// 函数调用</span></span><br></pre></td></tr></table></figure>
+<p>方法调用：方法调用表现为对象属性访问的形式。<br>区分：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'Hello'</span>, <span class="string">'World'</span>].join(<span class="string">', '</span>); <span class="comment">// 方法调用</span></span><br><span class="line">(&#123; <span class="attr">ten</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="number">10</span>; &#125; &#125;).ten(); <span class="comment">// 方法调用</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;  </span><br><span class="line">obj.myFunction = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>().toString();</span><br><span class="line">&#125;;</span><br><span class="line">obj.myFunction(); <span class="comment">// 方法调用</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> otherFunction = obj.myFunction;  </span><br><span class="line">otherFunction();     <span class="comment">// 函数调用  </span></span><br><span class="line"><span class="built_in">parseFloat</span>(<span class="string">'16.60'</span>); <span class="comment">// 函数调用  </span></span><br><span class="line"><span class="built_in">isNaN</span>(<span class="number">0</span>);            <span class="comment">// 函数调用</span></span><br></pre></td></tr></table></figure></p>
 <p>方法调用时，this指向调用方法的对象本身。</p>
 <blockquote>
 <p><strong>注意</strong>：方法会分离它自身的变量</p>
-<p>一个对象中的方法有可能会被抽离成一个变量。当使用这个变量调用方法时，this已经不指向调用该方法的对象。即如果方法调用不依靠对象，那么就是一个函数调用。创建函数绑定可以修复上下文，使该方法被正确调用。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params">type, legs</span>) </span>&#123;  </span><br><span class="line">&gt;   <span class="keyword">this</span>.type = type;</span><br><span class="line">&gt;   <span class="keyword">this</span>.legs = legs;  </span><br><span class="line">&gt;   <span class="keyword">this</span>.logInfo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">&gt;     <span class="built_in">console</span>.log(<span class="keyword">this</span> === myCat); <span class="comment">// =&gt; false</span></span><br><span class="line">&gt;     <span class="built_in">console</span>.log(<span class="string">'The '</span> + <span class="keyword">this</span>.type + <span class="string">' has '</span> + <span class="keyword">this</span>.legs + <span class="string">' legs'</span>);</span><br><span class="line">&gt;   &#125;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt; <span class="keyword">var</span> myCat = <span class="keyword">new</span> Animal(<span class="string">'Cat'</span>, <span class="number">4</span>);  </span><br><span class="line">&gt; <span class="comment">// 打印出 "The undefined has undefined legs"</span></span><br><span class="line">&gt; <span class="comment">// 或者在严格模式下抛出错误 TypeError</span></span><br><span class="line">&gt; setTimeout(myCat.logInfo, <span class="number">1000</span>);  </span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
+<p>一个对象中的方法有可能会被抽离成一个变量。当使用这个变量调用方法时，this已经不指向调用该方法的对象。即如果方法调用不依靠对象，那么就是一个函数调用。创建函数绑定可以修复上下文，使该方法被正确调用。<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params">type, legs</span>) </span>&#123;  </span><br><span class="line">  <span class="keyword">this</span>.type = type;</span><br><span class="line">  <span class="keyword">this</span>.legs = legs;  </span><br><span class="line">  <span class="keyword">this</span>.logInfo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span> === myCat); <span class="comment">// =&gt; false</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'The '</span> + <span class="keyword">this</span>.type + <span class="string">' has '</span> + <span class="keyword">this</span>.legs + <span class="string">' legs'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> myCat = <span class="keyword">new</span> Animal(<span class="string">'Cat'</span>, <span class="number">4</span>);  </span><br><span class="line"><span class="comment">// 打印出 "The undefined has undefined legs"</span></span><br><span class="line"><span class="comment">// 或者在严格模式下抛出错误 TypeError</span></span><br><span class="line">setTimeout(myCat.logInfo, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <blockquote>
 <p>myCat.logInfo方法被分离了出来作为了参数传入函数内 setTimeout(myCat.logInfo)，然后 1s 后会发生函数调用。当 logInfo 被作为函数调用时，this 指向全局对象 window 或者在严格模式下为 undefined，因此对象信息没有正确地被打印。</p>
-<p>方法绑定可以使用 .bind() 方法。如果被分离的方法绑定了 myCat 对象，那么上下文问题就可以被解决了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; //打印 &quot;The Cat has 4 legs&quot;</span><br><span class="line">&gt; setTimeout(myCat.logInfo.bind(myCat), 1000); </span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
+<p>方法绑定可以使用 .bind() 方法。如果被分离的方法绑定了 myCat 对象，那么上下文问题就可以被解决了：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//打印 &quot;The Cat has 4 legs&quot;</span><br><span class="line">setTimeout(myCat.logInfo.bind(myCat), 1000);</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<blockquote>
 <p>此时，上下文被修复，this指向bind函数的第一个参数即myCat。</p>
-</blockquote>
 <h5 id="使用call，apply和bind改变this指向"><a href="#使用call，apply和bind改变this指向" class="headerlink" title="使用call，apply和bind改变this指向"></a>使用call，apply和bind改变this指向</h5><p>this 本身是不可变的，但是 JavaScript 中提供了 call() / apply() / bind() 三个函数来在函数调用时设置 this 的值。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Sets obj1 as the value of this inside fun() and calls fun() passing elements of argsArray as its arguments.</span></span><br><span class="line">fun.apply(obj1 [, argsArray])</span><br><span class="line"></span><br><span class="line"><span class="comment">// Sets obj1 as the value of this inside fun() and calls fun() passing arg1, arg2, arg3, ... as its arguments.</span></span><br><span class="line">fun.call(obj1 [, arg1 [, arg2 [,arg3 [, ...]]]])</span><br><span class="line"></span><br><span class="line"><span class="comment">// Returns the reference to the function fun with this inside fun() bound to obj1 and parameters of fun bound to the parameters specified arg1, arg2, arg3, ....</span></span><br><span class="line">fun.bind(obj1 [, arg1 [, arg2 [,arg3 [, ...]]]])</span><br></pre></td></tr></table></figure></p>
 <ul>
-<li>apply和call都能够强制改变this的指向，它们的第一个参数都为this将要指向的对象，第二个参数，是要传给要执行的函数的参数。</li>
-<li>其中call以一个一个的形式传递，apply以数组的形式传递。</li>
+<li>apply和call都能够强制改变this的指向，它们的第一个参数都为this将要指向的对象，第二个参数，是要传给要执行的函数的参数</li>
+<li>其中call以一个一个的形式传递，apply以数组的形式传递。这是他们唯一的不同。</li>
 <li>apply和call，他们都在调用的时候立即执行了函数，而bind返回一个新创建的函数，上下文环境为bind传递的第一个参数，等待调用。</li>
-<li><p>bind() 函数创建了一个永恒的上下文链并不可修改。一个绑定函数即使使用 call() 或者 apply()传入其他不同的上下文环境，也不会更改它之前连接的上下文环境。</p>
-<h5 id="构造函数上的this"><a href="#构造函数上的this" class="headerlink" title="构造函数上的this"></a>构造函数上的this</h5><p>如果函数作为构造函数用，那么其中的this就代表它即将new出来的对象。这是new语法带来的。<br>new做了：</p>
-</li>
-<li><p>创建一个新对象</p>
-</li>
+<li>bind() 函数创建了一个永恒的上下文链并不可修改。一个绑定函数即使使用 call() 或者 apply()传入其他不同的上下文环境，也不会更改它之前连接的上下文环境。<h5 id="构造函数上的this"><a href="#构造函数上的this" class="headerlink" title="构造函数上的this"></a>构造函数上的this</h5>如果函数作为构造函数用，那么其中的this就代表它即将new出来的对象。这是new语法带来的。<br>new做了：</li>
+<li>创建一个新对象</li>
 <li>将构造函数的this指向这个新对象</li>
 <li>指向构造函数的代码，为这个对象添加属性，方法等；</li>
-<li>return新对象</li>
+<li>将新对象return</li>
 </ul>
 <p>因此，当new操作符调用构造函数时，this其实指向的是这个新创建的对象，最后又将新的对象返回出来，被实例对象接收。因此构造函数的this，指向了新的实例对象。</p>
 <blockquote>
@@ -516,10 +484,6 @@
 <p>walkPeriod.format() 是一个在对象中的方法调用，它的上下文环境为walkPeriod,this指向walkPeriod。</p>
 </li>
 </ul>
-<h4 id="六、Reference"><a href="#六、Reference" class="headerlink" title="六、Reference"></a>六、Reference</h4><p>这波能反杀:<a href="https://www.jianshu.com/p/cd3fee40ef59" target="_blank" rel="noopener">前端基础进阶系列</a></p>
-<p>getify：<a href="https://github.com/getify/You-Dont-Know-JS/tree/1ed-zh-CN" target="_blank" rel="noopener">你不懂JS（系列丛书）</a></p>
-<p>zchen9：<a href="https://github.com/zchen9/code/issues/1" target="_blank" rel="noopener">JavaScript this?</a>    <a href="https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/" target="_blank" rel="noopener">–原文：Gentle explanation of ‘this’ keyword in JavaScript</a></p>
-<p>halfrost:<a href="https://github.com/halfrost/Halfrost-Field/blob/master/contents/JavaScript/%E6%8F%AD%E5%BC%80%20this%20%26%20that%20%E4%B9%8B%E8%BF%B7.md" target="_blank" rel="noopener">揭开 this &amp; that 之迷</a></p>
 
       
     </div>
@@ -544,8 +508,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/12/qiao/" rel="next" title="qiao">
-                <i class="fa fa-chevron-left"></i> qiao
+              <a href="/2018/11/13/front-share-01/" rel="next" title="front-share-01">
+                <i class="fa fa-chevron-left"></i> front-share-01
               </a>
             
           </div>
@@ -553,10 +517,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/14/front-note-01/" rel="prev" title="front-note-01">
-                front-note-01 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -690,7 +650,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前端基础知识点"><span class="nav-number">1.</span> <span class="nav-text">前端基础知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、内存空间"><span class="nav-number">1.1.</span> <span class="nav-text">一、内存空间</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数据类型"><span class="nav-number">1.1.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#认识三种数据架构"><span class="nav-number">1.1.2.</span> <span class="nav-text">认识三种数据架构</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、执行上下文-Execution-Context"><span class="nav-number">1.2.</span> <span class="nav-text">二、执行上下文(Execution Context)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、变量对象-Variable-Object"><span class="nav-number">1.3.</span> <span class="nav-text">三、变量对象(Variable Object)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建变量对象"><span class="nav-number">1.3.1.</span> <span class="nav-text">创建变量对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#全局上下文的变量对象"><span class="nav-number">1.3.2.</span> <span class="nav-text">全局上下文的变量对象</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、作用域链与闭包"><span class="nav-number">1.4.</span> <span class="nav-text">四、作用域链与闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#作用域"><span class="nav-number">1.4.1.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#闭包"><span class="nav-number">1.4.2.</span> <span class="nav-text">闭包</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五、this"><span class="nav-number">1.5.</span> <span class="nav-text">五、this</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#函数中的this"><span class="nav-number">1.5.1.</span> <span class="nav-text">函数中的this</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用call，apply和bind改变this指向"><span class="nav-number">1.5.2.</span> <span class="nav-text">使用call，apply和bind改变this指向</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#构造函数上的this"><span class="nav-number">1.5.3.</span> <span class="nav-text">构造函数上的this</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#箭头函数中的this"><span class="nav-number">1.5.4.</span> <span class="nav-text">箭头函数中的this</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#六、Reference"><span class="nav-number">1.6.</span> <span class="nav-text">六、Reference</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前端基础知识点"><span class="nav-number">1.</span> <span class="nav-text">前端基础知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、内存空间"><span class="nav-number">1.1.</span> <span class="nav-text">一、内存空间</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数据类型"><span class="nav-number">1.1.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#认识三种数据架构"><span class="nav-number">1.1.2.</span> <span class="nav-text">认识三种数据架构</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、执行上下文-Execution-Context"><span class="nav-number">1.2.</span> <span class="nav-text">二、执行上下文(Execution Context)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、变量对象-Variable-Objext"><span class="nav-number">1.3.</span> <span class="nav-text">三、变量对象(Variable Objext)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建变量对象"><span class="nav-number">1.3.1.</span> <span class="nav-text">创建变量对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#全局上下文的变量对象"><span class="nav-number">1.3.2.</span> <span class="nav-text">全局上下文的变量对象</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#四、作用域链与闭包"><span class="nav-number">1.4.</span> <span class="nav-text">四、作用域链与闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#作用域"><span class="nav-number">1.4.1.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#闭包"><span class="nav-number">1.4.2.</span> <span class="nav-text">闭包</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#五、this"><span class="nav-number">1.5.</span> <span class="nav-text">五、this</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#函数中的this"><span class="nav-number">1.5.1.</span> <span class="nav-text">函数中的this</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用call，apply和bind改变this指向"><span class="nav-number">1.5.2.</span> <span class="nav-text">使用call，apply和bind改变this指向</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#构造函数上的this"><span class="nav-number">1.5.3.</span> <span class="nav-text">构造函数上的this</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#箭头函数中的this"><span class="nav-number">1.5.4.</span> <span class="nav-text">箭头函数中的this</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
