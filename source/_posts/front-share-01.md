@@ -48,7 +48,8 @@ tags:
   changeColor();
   ```
   执行过程：
-  ![过程](./front-share-01/execution-context.png)
+  {% asset_img process.png 过程 %}
+  ![过程](./front-share-01/process.png)
   > 注意：函数中，遇到return能直接终止可执行代码的执行，因此会直接将当前上下文弹出栈。
 
 总结： 
@@ -59,7 +60,7 @@ tags:
   - 每次某个函数被调用，就会有个新的执行上下文为其创建，即使是调用的自身函数，也是如此。
 
 #### 三、变量对象(Variable Object) 
-
+---
 一个执行上下文的生命周期可以分为两个阶段:
 
 - 创建阶段
@@ -67,6 +68,7 @@ tags:
 
 - 代码执行阶段
 创建完成之后，就会开始执行代码，这个时候，会完成**变量赋值**，**函数引用**，以及**执行其他代码**。
+{% asset_img execution-context-cycle.png 执行上下文生命周期 %}
 ![执行上下文生命周期](./front-share-01/execution-context-cycle.png)
 
 ##### 创建变量对象
@@ -149,13 +151,13 @@ windowEC = {
 ```
 
 #### 四、作用域链与闭包
+---
 
 ##### 作用域
 
 - JavaScript中只有全局作用域与函数作用域(因为eval我们平时开发中几乎不会用到它，这里不讨论)。
 
 - 作用域与执行上下文：JavaScript代码的整个执行过程，分为两个阶段，代码编译阶段与代码执行阶段。编译阶段由编译器完成，将代码翻译成可执行代码，这个阶段作用域规则会确定。执行阶段由引擎完成，主要任务是执行可执行代码，执行上下文在这个阶段创建。
-![作用域链](./front-share-01/scope-chain.png)
 
 **作用域链，是由当前环境与上层环境的一系列变量对象组成，它保证了当前执行环境对符合访问权限的变量和函数的有序访问。**
 
@@ -180,8 +182,8 @@ innerTestEC = {
   scopeChain: [VO(innerTest), VO(test), VO(global)], // 作用域链
 }
 ```
-
-![innerTest的作用域链](https://upload-images.jianshu.io/upload_images/599584-b5e7e00de7c9213a.png)
+{% asset_img innertest-scope-chain.png innerTest的作用域链 %}
+![innerTest的作用域链](./front-share-01/innertest-scope-chain.png)
 
 
 
@@ -227,12 +229,13 @@ bar(); // 2
 在上面的例子中，foo执行完毕之后，生命周期结束，按照垃圾回收机制会被回收。但是通过`fn = innnerFoo;`函数innnerFoo的引用被保存了下来，赋值给了全局变量fn。这个行为导致了foo的变量对象也被保留了下来。于是，函数fn在函数bar内部执行时，依然可以访问这个被保留下来的变量对象。所以此刻仍然能够访问到变量a的值。
 
 这样，我们就可以称foo为闭包。
-
+{% asset_img fn-scope-chain.png 闭包foo的作用域链 %}
 ![闭包foo的作用域链](./front-share-01/fn-scope-chain.png)
 
 所以，通过闭包，我们可以在**其他的执行上下文中，访问到函数的内部变量**。比如在上面的例子中，我们在函数bar的执行环境中访问到了函数foo的a变量。
 
 #### 五、this
+---
 
 this的指向，是在函数被调用的时候确定的，也就是执行上下文被创建的时候确定的。**在函数执行过程中，this一旦确定就不可更改。**
 
@@ -422,6 +425,7 @@ new做了：
   walkPeriod.format() 是一个在对象中的方法调用，它的上下文环境为walkPeriod,this指向walkPeriod。
 
 #### 六、Reference
+---
 
 这波能反杀:[前端基础进阶系列](https://www.jianshu.com/p/cd3fee40ef59)
 
