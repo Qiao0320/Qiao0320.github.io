@@ -61,7 +61,7 @@ tags:
 
   执行过程：
   {% asset_img execution-context.png 过程 %}
-  ![过程](D:/blog/Qiao0320.github.io/source/_posts/front-share-01/execution-context.png)
+  ![过程](./front-share-01/execution-context.png)
 
 > 注意：函数中，遇到return能直接终止可执行代码的执行，因此会直接将当前上下文弹出栈。
 
@@ -84,7 +84,7 @@ tags:
 - 代码执行阶段
   创建完成之后，就会开始执行代码，这个时候，会完成**变量赋值**，**函数引用**，以及**执行其他代码**。
   {% asset_img execution-context-cycle.png 执行上下文生命周期 %}
-  ![执行上下文生命周期](D:/blog/Qiao0320.github.io/source/_posts/front-share-01/execution-context-cycle.png)
+  ![执行上下文生命周期](./front-share-01/execution-context-cycle.png)
 
 ##### 创建变量对象
 
@@ -188,7 +188,7 @@ windowEC = {
   > - JavaScript 采用词法作用域。
 
 {% asset_img process.png 过程 %}
-  ![过程](D:/blog/Qiao0320.github.io/source/_posts/front-share-01/process.png)
+  ![过程](./front-share-01/process.png)
 
 **作用域链，是由当前环境与上层环境的一系列变量对象组成，它保证了当前执行环境对符合访问权限的变量和函数的有序访问。**
 
@@ -215,7 +215,7 @@ innerTestEC = {
 ```
 
 {% asset_img innertest-scope-chain.png innerTest的作用域链 %}
-![innerTest的作用域链](D:/blog/Qiao0320.github.io/source/_posts/front-share-01/innertest-scope-chain.png)
+![innerTest的作用域链](./front-share-01/innertest-scope-chain.png)
 
 
 
@@ -259,7 +259,7 @@ bar(); // 2
 
 在上面的例子中，foo执行完毕之后，生命周期结束，按照垃圾回收机制会被回收。但是通过`fn = innnerFoo;`函数innnerFoo的引用被保存了下来，赋值给了全局变量fn。这个行为导致了foo的变量对象也被保留了下来。于是，函数fn在函数bar内部执行时，依然可以访问这个被保留下来的变量对象。所以此刻仍然能够访问到变量a的值。
 {% asset_img fn-scope-chain.png 闭包innnerFoo的作用域链 %}
-![闭包foo的作用域链](D:/blog/Qiao0320.github.io/source/_posts/front-share-01/fn-scope-chain.png)
+![闭包foo的作用域链](./front-share-01/fn-scope-chain.png)
 
 所以，通过闭包，我们可以在**其他的执行上下文中，访问到函数的内部变量**。比如在上面的例子中，我们在函数bar的执行环境中访问到了函数foo的a变量。
 
